@@ -1,0 +1,136 @@
+/* Full page background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Background image */
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1503264116251-35a269479413");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.container {
+  width: 100%;
+  max-width: 360px;   /* PC limit */
+  padding: 30px;
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  /* glass effect */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+  text-align: center;
+
+  transition: transform 0.4s ease;
+}
+
+.container:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Heading */
+.container h1 {
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+/* Inputs */
+.container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+
+  transition: 0.3s;
+}
+
+.container input:focus {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #00c6ff;
+}
+
+/* Buttons */
+.container button {
+  width: 48%;
+  padding: 10px;
+  margin: 10px 2px;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.container button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
+}
+
+/* =========================
+   📱 TABLET (768px)
+========================= */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    padding: 25px;
+  }
+
+  .container h1 {
+    font-size: 22px;
+  }
+
+  .container button {
+    width: 100%;
+    margin: 6px 0;
+  }
+}
+
+/* =========================
+   📱 MOBILE (480px)
+========================= */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .container h1 {
+    font-size: 20px;
+  }
+
+  .container input {
+    padding: 9px;
+  }
+
+  .container button {
+    width: 100%;
+    margin: 6px 0;
+  }
+}
